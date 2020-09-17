@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>02jsx</title>
+</head>
+
+<body>
+    <h2>前端JS框架列表</h2>
+    <div id="exanple1"></div>
+    <script  src="../js/react.development-16.13.js"></script>
+    <script  src="../js/react-dom.development-16.13.js"></script>
+    <script  src="../js/babel.min-6.26.js"></script>
+    
+    <script type="text/babel">
+        const names=["jQuery",'zepto','angular','react','vue']
+
+        const ul=(
+            <ul>
+              {
+                names.map((name,index)=><li key={index}>{name}</li>)
+              }
+            </ul>
+        )
+
+        ReactDOM.render(ul,document.getElementById("exanple1"))
+    </script>
+</body>
+
+</html>
